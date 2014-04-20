@@ -1,0 +1,47 @@
+{
+  "name": "gulp-esnext",
+  "version": "0.0.0",
+  "description": "Transform next-generation JavaScript to today's JavaScript",
+  "license": "MIT",
+  "repository": "sindresorhus/gulp-esnext",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "esnext",
+    "rewriting",
+    "transformation",
+    "syntax",
+    "codegen",
+    "desugaring",
+    "javascript",
+    "ecmascript",
+    "language",
+    "es5",
+    "es6",
+    "ES.next",
+    "harmony",
+    "compiler",
+    "transpiler"
+  ],
+  "dependencies": {
+    "esnext": "^0.7.6",
+    "gulp-util": "^2.2.0",
+    "through2": "^0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
