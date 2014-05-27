@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 var through = require('through2');
 var esnext = require('esnext');
 
-module.exports = function () {
+module.exports = function (options) {
 	return through.obj(function (file, enc, cb) {
 		if (file.isNull()) {
 			this.push(file);
@@ -16,7 +16,7 @@ module.exports = function () {
 		}
 
 		try {
-			var res = esnext.compile(file.contents.toString());
+			var res = esnext.compile(file.contents.toString(), options);
 
 			file.contents = new Buffer(res.code);
 
