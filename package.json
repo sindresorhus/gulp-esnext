@@ -1,6 +1,6 @@
 {
   "name": "gulp-esnext",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Transform next-generation JavaScript to today's JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/gulp-esnext",
