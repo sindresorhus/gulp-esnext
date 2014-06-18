@@ -33,6 +33,8 @@ gulp.task('default', function () {
 
 [Options](https://github.com/square/esnext/blob/b12248e0a0e60df04c5292bf8265b55c42d4b480/lib/index.js#L25) are passed through to esnext.
 
+If `sourceMap: true` is passed in, a SourceMap comment is appended to the bottom of each file.
+
 
 ## License
 
