@@ -33,6 +33,25 @@ gulp.task('default', function () {
 
 [Options](https://github.com/square/esnext/blob/b12248e0a0e60df04c5292bf8265b55c42d4b480/lib/index.js#L25) are passed through to esnext.
 
+## Source Maps
+
+Use [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) like this:
+
+```js
+var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
+var esnext = require('gulp-esnext');
+var concat = require('gulp-concat');
+
+gulp.task('default', function () {
+    return gulp.src('src/**/*.js')
+        .pipe(sourcemaps.init())
+            .pipe(esnext())
+            .pipe(concat('all.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('dist'));
+});
+```
 
 ## License
 
