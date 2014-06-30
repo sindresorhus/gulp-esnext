@@ -37,9 +37,9 @@
     "transpiler"
   ],
   "dependencies": {
-    "esnext": "^0.7.6",
+    "esnext": "^0.8.2",
     "gulp-util": "^2.2.0",
-    "through2": "^0.4.0"
+    "through2": "^0.5.1"
   },
   "devDependencies": {
     "mocha": "*"
