@@ -29,7 +29,7 @@ module.exports = function (options) {
 				}));
 			}
 		} catch (err) {
-			this.emit('error', new gutil.PluginError('gulp-esnext', err));
+			this.emit('error', new gutil.PluginError('gulp-esnext', err, {fileName: file.path}));
 		}
 
 		this.push(file);
