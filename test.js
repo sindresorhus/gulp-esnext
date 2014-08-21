@@ -8,14 +8,14 @@ it('should transpile ES6 to ES5 with esnext', function (cb) {
 
 	stream.on('data', function (file) {
 		if (/\.map$/.test(file.path)) {
-			assert(/\"version":3/.test(file.contents.toString()));
+			assert(/"version":3/.test(file.contents.toString()));
 			assert.equal(file.relative, 'fixture.js.map');
 			return;
 		}
 
 		assert(/function/.test(file.contents.toString()));
 		assert.equal(file.relative, 'fixture.js');
-	})
+	});
 
 	stream.on('end', cb);
 
