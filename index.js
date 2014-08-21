@@ -3,7 +3,6 @@ var gutil = require('gulp-util');
 var through = require('through2');
 var esnext = require('esnext');
 var applySourceMap = require('vinyl-sourcemaps-apply');
-var objectAssign = require('object-assign');
 
 module.exports = function (options) {
 	options = options || {};
@@ -20,14 +19,12 @@ module.exports = function (options) {
 		}
 
 		try {
-			var fileOptions = objectAssign({}, options);
-
 			if (file.sourceMap) {
-				fileOptions.sourceFileName = file.relative;
-				fileOptions.sourceMapName = file.relative;
+				options.sourceFileName = file.relative;
+				options.sourceMapName = file.relative;
 			}
 
-			var res = esnext.compile(file.contents.toString(), fileOptions);
+			var res = esnext.compile(file.contents.toString(), options);
 
 			file.contents = new Buffer(res.code);
 
