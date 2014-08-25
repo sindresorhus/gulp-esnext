@@ -10,13 +10,13 @@ module.exports = function (options) {
 
 	return through.obj(function (file, enc, cb) {
 		if (file.isNull()) {
-			this.push(file);
-			return cb();
+			cb(null, file);
+			return;
 		}
 
 		if (file.isStream()) {
-			this.emit('error', new gutil.PluginError('gulp-esnext', 'Streaming not supported'));
-			return cb();
+			cb(new gutil.PluginError('gulp-esnext', 'Streaming not supported'));
+			return;
 		}
 
 		try {
@@ -34,11 +34,10 @@ module.exports = function (options) {
 			if (res.map && file.sourceMap) {
 				applySourceMap(file, res.map);
 			}
-		} catch (err) {
-			this.emit('error', new gutil.PluginError('gulp-esnext', err, {fileName: file.path}));
-		}
 
-		this.push(file);
-		cb();
+			cb(null, file);
+		} catch (err) {
+			cb(new gutil.PluginError('gulp-esnext', err, {fileName: file.path}))
+		}
 	});
 };

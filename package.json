@@ -37,10 +37,10 @@
     "transpiler"
   ],
   "dependencies": {
-    "esnext": "^0.8.2",
+    "esnext": "^0.8.3",
     "gulp-util": "^3.0.0",
-    "object-assign": "^0.3.1",
-    "through2": "^0.5.1",
+    "object-assign": "^1.0.0",
+    "through2": "^0.6.1",
     "vinyl-sourcemaps-apply": "^0.1.1"
   },
   "devDependencies": {

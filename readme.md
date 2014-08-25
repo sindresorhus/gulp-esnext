@@ -44,12 +44,12 @@ var esnext = require('gulp-esnext');
 var concat = require('gulp-concat');
 
 gulp.task('default', function () {
-    return gulp.src('src/**/*.js')
-        .pipe(sourcemaps.init())
-            .pipe(esnext())
-            .pipe(concat('all.js'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist'));
+	return gulp.src('src/**/*.js')
+		.pipe(sourcemaps.init())
+		.pipe(esnext())
+		.pipe(concat('all.js'))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('dist'));
 });
 ```
 
