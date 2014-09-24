@@ -37,7 +37,7 @@ module.exports = function (options) {
 
 			cb(null, file);
 		} catch (err) {
-			cb(new gutil.PluginError('gulp-esnext', err, {fileName: file.path}))
+			cb(new gutil.PluginError('gulp-esnext', err, {fileName: file.path}));
 		}
 	});
 };
