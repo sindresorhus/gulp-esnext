@@ -35,9 +35,11 @@ module.exports = function (options) {
 				applySourceMap(file, res.map);
 			}
 
-			cb(null, file);
+			this.push(file);
 		} catch (err) {
-			cb(new gutil.PluginError('gulp-esnext', err, {fileName: file.path}));
+			this.emit('error', new gutil.PluginError('gulp-esnext', err, {fileName: file.path}));
 		}
+
+		cb();
 	});
 };
