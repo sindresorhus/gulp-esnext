@@ -37,7 +37,7 @@
     "transpiler"
   ],
   "dependencies": {
-    "esnext": "^0.11.1",
+    "esnext": "^0.12.0",
     "gulp-util": "^3.0.0",
     "object-assign": "^1.0.0",
     "through2": "^0.6.1",
