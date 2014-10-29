@@ -32,7 +32,7 @@ it('should generate source maps', function (cb) {
 		.pipe(write);
 
 	write.on('data', function (file) {
-		assert.equal(file.sourceMap.mappings, 'AAAA,CAAC,CAAC,IAAI;WAAQ,EAAE;CAAC');
+		assert.equal(file.sourceMap.sources[0], 'fixture.js');
 		var contents = file.contents.toString();
 		assert(/function/.test(contents));
 		assert(/sourceMappingURL=data:application\/json;base64/.test(contents));
