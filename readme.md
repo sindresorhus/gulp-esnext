@@ -1,4 +1,4 @@
-# [gulp](http://gulpjs.com)-esnext [![Build Status](https://travis-ci.org/sindresorhus/gulp-esnext.svg?branch=master)](https://travis-ci.org/sindresorhus/gulp-esnext)
+# gulp-esnext [![Build Status](https://travis-ci.org/sindresorhus/gulp-esnext.svg?branch=master)](https://travis-ci.org/sindresorhus/gulp-esnext)
 
 > Transform next-generation JavaScript to today's JavaScript with [esnext](https://github.com/esnext/esnext)
 
@@ -32,7 +32,7 @@ gulp.task('default', function () {
 
 #### options
 
-[Options](https://github.com/esnext/esnext/blob/fbfba30fb31893bd03cedb73fa97b91fa0b6dd01/lib/index.js#L29) are passed through to esnext.
+[Options](https://github.com/esnext/esnext/blob/8ccc0dec81c1cb9a5cf09346c1e1b25bfd630fe6/lib/index.js#L28) are passed through to esnext.
 
 
 ## Source Maps
@@ -50,7 +50,7 @@ gulp.task('default', function () {
 		.pipe(sourcemaps.init())
 		.pipe(esnext())
 		.pipe(concat('all.js'))
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('dist'));
 });
 ```
