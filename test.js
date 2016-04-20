@@ -4,7 +4,7 @@ var gutil = require('gulp-util');
 var sourceMaps = require('gulp-sourcemaps');
 var esnext = require('./');
 
-it('should transpile ES6 to ES5 with esnext', function (cb) {
+it('should transpile ES2015 to ES5 with esnext', function (cb) {
 	var stream = esnext();
 
 	stream.on('data', function (file) {
