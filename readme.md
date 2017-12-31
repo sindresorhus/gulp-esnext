@@ -1,3 +1,10 @@
+# Deprecated
+
+Deprecated because the `esnext` project is no longer maintained.
+
+---
+
+
 # gulp-esnext [![Build Status](https://travis-ci.org/sindresorhus/gulp-esnext.svg?branch=master)](https://travis-ci.org/sindresorhus/gulp-esnext)
 
 > Transform next-generation JavaScript to today's JavaScript with [esnext](https://github.com/esnext/esnext)
